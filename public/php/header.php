@@ -96,7 +96,7 @@ $resultat = $requete->fetch(PDO::FETCH_OBJ);
               </div>
             </div><!--bouton pour aller au formulaire d'inscription-->
             <input type="submit" id="connexion" name="connexion" class="btn btn-outline-success" value="connecter">
-            <a href="register.php" class="btn btn-outline-warning mt-2">S'incrire</a>
+            <a href="formulaire_register.php" class="btn btn-outline-warning mt-2">S'incrire</a>
           </div>
         </div>
       </form>
