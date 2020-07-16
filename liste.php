@@ -69,8 +69,9 @@ else{
        <td><?php echo $produit->pro_d_ajout; ?></td>
        <td><?php echo $produit->pro_d_modif; ?></td>
        <td><?php if($produit->pro_bloque==1){echo "oui";}if($produit->pro_bloque==0){echo "non";}; ?></td>
+        <!--change le 1 et le 0 de la table de donner en oui ou non pour afficher clairement les element bloquer-->
      </tr>
-     <?php endwhile; ?>
+     <?php endwhile; ?><!--fin de la boucle while-->
    </tbody>
  </table>
  </div>

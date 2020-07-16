@@ -9,11 +9,11 @@
   $sto = $_POST["stock"];
   $cou = $_POST["couleur"];
   //variable pour l'image
-  $fichier = basename($_FILES['fichier']['name']);
-  $taille_maxi = 500000;
-  $taille = filesize($_FILES['fichier']['tmp_name']);
-  $extensions = array('.png', '.gif', '.jpg', '.jpeg');
-  $extension = strrchr($_FILES['fichier']['name'], '.');
+  $fichier = basename($_FILES['fichier']['name']);//nom de base du fichier
+  $taille_maxi = 500000;// taille max autoriser pour l'import
+  $taille = filesize($_FILES['fichier']['tmp_name']);//recup de la taill du fichier uploader
+  $extensions = array('.png', '.gif', '.jpg', '.jpeg');//extension autoriser
+  $extension = strrchr($_FILES['fichier']['name'], '.');//extension du fichier en .quelque chose
 
 
 
@@ -35,7 +35,7 @@
       echo "reference pas ok","<br>";
       $check01 = false;
     }
- 
+ //connexion base de donner pour verifiacation doublons
   require_once "connexion_bdd.php";
   $db = connexionBase(); // Appel de la fonction de connexion 
   $pseudo= addslashes($_POST['reference']);// debroussaillage des caractere qui doivent l'etre

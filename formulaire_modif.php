@@ -41,7 +41,7 @@ else{
                 <select name="categorie" id="categorie" class="form-control">
                 <?php while($produit = $result->fetch(PDO::FETCH_OBJ)) : ?>
                 <option value=<?php echo $produit->cat_id; ?>><?php echo ($_POST["Catev"]),"->", $produit->cat_nom; ?></option>
-                <?php endwhile; ?>
+                <?php endwhile; ?><!--code qui sera envoyer                recuperation categorie fichier precedent et selection de la categorie definitive-->
                 </select>
                 </div>
 

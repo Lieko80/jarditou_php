@@ -20,7 +20,6 @@ else{
      $db = connexionBase(); // Appel de la fonction de connexion
      $pro_id = $_GET["pro_id"];
      $requete = "SELECT * FROM produits inner join categories on cat_id=pro_cat_id where pro_id=".$pro_id;
-     
      $result = $db->query($requete); 
      $produit = $result->fetch(PDO::FETCH_OBJ);        
      ?>
@@ -41,7 +40,7 @@ else{
                 <div class="form-group mx-2">
                     <label for="id"> Categorie: </label>
                     <input type="text" id="Catev" name="Catev" class="form-control"value="<?php echo $produit->cat_nom; ?>" readonly>
-                    <input type="text" id="Cate" name="Cate" class="form-control"value="<?php echo $produit->pro_cat_id; ?>" hidden>
+                    <input type="text" id="Cate" name="Cate" class="form-control"value="<?php echo $produit->pro_cat_id; ?>" hidden><!--hidden me permet de reporter le numero de categorie sur la page de modification tout en affichant le nom de la ctaegorie-->
                 </div>
 <!--Libellé-->
                 <div class="form-group mx-2">

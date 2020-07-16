@@ -39,7 +39,7 @@ else{
                     <label for="reference"> Référence: </label>
                     <input type="text" id="reference" name="reference" class="form-control"value="" >
                     <small id="Errreference" class="text-danger"><?php if (isset($pasok['Errreference'])) echo $pasok['Errreference']; ?></small>
-
+                    <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
                 </div>
 <!--Categorie-->
 
@@ -57,30 +57,35 @@ else{
                     <label for="id"> Libellé: </label>
                     <input type="text" id="libelle" name="libelle" class="form-control"value="" >
                     <small id="Errlibelle" class="text-danger"><?php if (isset($pasok['Errlibelle'])) echo $pasok['Errlibelle']; ?></small>
+                    <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
                 </div>
 <!--Description-->
                 <div class="form-group mx-2">
                     <label for="id"> Description: </label>
                     <textarea name="description" class="form-control" id="description" ></textarea>
                     <small id="Errdescription" class="text-danger"><?php if (isset($pasok['Errdescription'])) echo $pasok['Errdescription']; ?></small>
+                    <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
                 </div>
 <!--Prix-->
                 <div class="form-group mx-2">
                     <label for="id"> Prix: </label>
                     <input type="text" id="prix" name="prix" class="form-control"value="" >
                     <small id="Errprix" class="text-danger"><?php if (isset($pasok['Errprix'])) echo $pasok['Errprix']; ?></small>
+                    <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
                 </div>
 <!--Stock-->
                 <div class="form-group mx-2">
                     <label for="id"> Stock: </label>
                     <input type="text" id="stock" name="stock" class="form-control"value="" >
                     <small id="Errstock" class="text-danger"><?php if (isset($pasok['Errstock'])) echo $pasok['Errstock']; ?></small>
+                    <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
                 </div>
 <!--Couleur-->
                 <div class="form-group mx-2">
                     <label for="id"> Couleur: </label>
                     <input type="text" id="couleur" name="couleur" class="form-control"value="" >
                     <small id="Errcouleur" class="text-danger"><?php if (isset($pasok['Errcouleur'])) echo $pasok['Errcouleur']; ?></small>
+                    <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
                 </div>
                 
 <!--extension photo-->
@@ -88,7 +93,8 @@ else{
                     <input type="text" id="extension" name="extension" class="form-control"value="" hidden>
                     <input type="file"  name="fichier" id="fichier">
                     <small id="Errextension" class="text-danger"><?php if (isset($pasok['Errextension'])) echo $pasok['Errextension']; ?></small>
-                    </div>
+                    <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
+                </div>
 <!--bloque bouton radio non relier au fichier detail-->
                 <div class="form">
                 <label class="col-form-label mx-2" for="bloque">Produit bloqué:</label>
@@ -101,7 +107,7 @@ else{
                     <label class="custom-control-label" for="bloque0">Non</label>
                 </div>
                 <small id="Errbloquer" class="text-danger"><?php if (isset($pasok['Errbloquer'])) echo $pasok['Errbloquer']; ?></small>
-
+                    <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
                 </div>
 
 <!--bouton ajout-->

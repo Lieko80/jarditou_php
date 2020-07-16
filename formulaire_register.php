@@ -32,17 +32,20 @@ require "script_register.php";
         <label for="Identifiant">Entrez un identifiant : *</label>
         <input type="text" name="Identifiant" id="Identifiant" class="form-control form-control-sm" data-toggle="tooltip" data-placement="right" title="Entrez un nom d'utilisateur.">
         <small id="ErrSID" class="form-text text-danger"><?php if (isset($pasok['ErrSID'])) echo $pasok['ErrSID']; ?></small>
-      </div>
+        <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
+        </div>
       <div class="form-group col-10">
         <label for="passwd">Entrez un mot de passe : *</label>
         <input type="password" name="passwd" id="passwd" class="form-control form-control-sm" data-toggle="tooltip" data-placement="right" title="Entrez une combinaison d'au moins 6 caractères pouvant contenir de la ponctuation (_, ., etc).">
         <small id="ErrSPW" class="form-text text-danger"><?php if (isset($pasok['ErrSPW'])) echo $pasok['ErrSPW']; ?></small>
-      </div>
+        <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
+        </div>
       <div class="form-group col-10">
         <label for="confpasswd"> Comfirmez le mot de passe : *</label>
         <input type="password" name="confpasswd" id="confpasswd" class="form-control form-control-sm" data-toggle="tooltip" data-placement="right" title="Saisissez à nouveau votre mot de passe pour confirmer.">
         <small id="ErrSCPW" class="form-text text-danger"><?php if (isset($pasok['ErrSCPW'])) echo $pasok['ErrSCPW']; ?></small>
-      </div>
+        <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
+        </div>
       <button type="submit" class="btn btn-success ml-4 mt-3" id="sign">Valider</button>
   </div>
   </form>
