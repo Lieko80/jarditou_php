@@ -45,8 +45,20 @@ require "script_register.php";
         <input type="password" name="confpasswd" id="confpasswd" class="form-control form-control-sm" data-toggle="tooltip" data-placement="right" title="Saisissez à nouveau votre mot de passe pour confirmer.">
         <small id="ErrSCPW" class="form-text text-danger"><?php if (isset($pasok['ErrSCPW'])) echo $pasok['ErrSCPW']; ?></small>
         <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
+      </div>
+      <!--case pour le captcha-->   
+      <form action="" method="post">
+          <p class="mx-3 ">Captcha*</P>
+          <input class="border col-2 mx-3" type="text" name="captcha"/>
+          <img class="mx-2"  src="image.php" onclick="this.src='image.php?' + Math.random();" alt="captcha" >
+          <small id="Errcap" class="form-text text-danger mx-3"><?php if (isset($pasok['Errcap'])) echo $pasok['Errcap']; ?></small>
+
+        <div>
+        <input type="submit" class="btn btn-success mx-3 my-3" id="sign"/>
         </div>
-      <button type="submit" class="btn btn-success ml-4 mt-3" id="sign">Valider</button>
+      </form>
+      <!-------------------------->
+      <!--<button type="submit" class="btn btn-success ml-4 mt-3" id="sign">Valider</button>-->
   </div>
   </form>
 </div>

@@ -96,8 +96,22 @@
     }
   }
 
+  if(isset($_POST['captcha']))
+  {
+    if($_POST['captcha']==$_SESSION['code'])
+    {
+      $check05=true;
+    } 
+    else 
+    {
+      $pasok["Errcap"] = "Code incorrect" ;
+      $check05=false;
 
-if ($check01==true and $check02==true and $check03==true and $check04==true)
+    }
+}
+
+
+if ($check01==true and $check02==true and $check03==true and $check04==true and $check05==true)
 {
 /*verif et envoie des donner d'inscription*/
 

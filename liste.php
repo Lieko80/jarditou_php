@@ -35,8 +35,8 @@ else{
      ?>
 
 <!--premiere ligne de mon tableau pour definir les noms-->
-     <div>
-     <div class="table-responsive">
+<div>
+<div class="table-responsive">
     <table class="table table-striped table-bordered">
         <thead class="thead-dark">
             <tr>           
@@ -72,9 +72,9 @@ else{
         <!--change le 1 et le 0 de la table de donner en oui ou non pour afficher clairement les element bloquer-->
      </tr>
      <?php endwhile; ?><!--fin de la boucle while-->
-   </tbody>
- </table>
- </div>
+    </tbody>
+    </table>
+</div>
  
 
 
