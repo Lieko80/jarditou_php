@@ -20,6 +20,8 @@ else{
 
 <?php
 require "script_register.php";
+require_once "recaptchalib.php";
+
 ?>
 
 <div class="row">
@@ -46,19 +48,12 @@ require "script_register.php";
         <small id="ErrSCPW" class="form-text text-danger"><?php if (isset($pasok['ErrSCPW'])) echo $pasok['ErrSCPW']; ?></small>
         <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
       </div>
-      <!--case pour le captcha-->   
-      <form action="" method="post">
-          <p class="mx-3 ">Captcha*</P>
-          <input class="border col-2 mx-3" type="text" name="captcha"/>
-          <img class="mx-2"  src="image.php" onclick="this.src='image.php?' + Math.random();" alt="captcha" >
-          <small id="Errcap" class="form-text text-danger mx-3"><?php if (isset($pasok['Errcap'])) echo $pasok['Errcap']; ?></small>
+      <!--case pour le captcha-->  
+      <div class="g-recaptcha mx-3" data-sitekey="6LdxGbIZAAAAANx8Gm8hDdD111CFCW4RsocdI-A6"></div>
+      <small id="Errcaptcha" class="form-text text-danger mx-3"><?php if (isset($pasok['Errcaptcha'])) echo $pasok['Errcaptcha']; ?></small>
 
-        <div>
-        <input type="submit" class="btn btn-success mx-3 my-3" id="sign"/>
-        </div>
-      </form>
       <!-------------------------->
-      <!--<button type="submit" class="btn btn-success ml-4 mt-3" id="sign">Valider</button>-->
+      <button type="submit" class="btn btn-success ml-4 mt-3" id="sign">Valider</button>
   </div>
   </form>
 </div>
@@ -70,7 +65,7 @@ require "script_register.php";
 else{
      echo "voir chemin footer.php";
     }?>
-
+<script src='https://www.google.com/recaptcha/api.js?hl=fr'></script>
 </div>
 <!--appel raccourcie pour le pieds de page des pages-->
 <?php if(file_exists("public/php/piedsdepage.php")){
@@ -78,3 +73,4 @@ else{
 else{
      echo "voir chemin piedsdepage.php";
     }?>
+    

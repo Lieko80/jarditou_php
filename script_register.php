@@ -43,13 +43,15 @@
     if (preg_match($viden, $iden)) 
     {
       $check02=true;
-    } else if (empty($iden)) 
+    } 
+    else if (empty($iden)) 
     {
 
       $pasok["ErrSID"] = "Entrez un identifiant" ;
       $check02=false;
 
-    } else 
+    } 
+    else 
     {
       $pasok["ErrSID"] = "Identifiant incorrect" ;
       $check02=false;
@@ -63,12 +65,14 @@
     if (preg_match($vpass, $pass)) 
     {
       $check03=true;
-    } else if (empty($pass)) 
+    } 
+    else if (empty($pass)) 
     {
       $pasok["ErrSPW"] = "Entrez un mot de passe" ;
       $check03=false;
 
-    } else 
+    } 
+    else 
     {
       $pasok["ErrSPW"] = "Mot de passe incorrect" ;
       $check03=false;
@@ -83,12 +87,14 @@
     if (preg_match($vpass, $cpas) && ($cpas == $pass)) 
     {
       $check04=true;
-    } else if (empty($cpas)) 
+    } 
+    else if (empty($cpas)) 
     {
       $pasok["ErrSCPW"] = "Rentrer de nouveau le mot de passe" ;
       $check04=false;
 
-    } else 
+    } 
+    else 
     {
       $pasok["ErrSCPW"] = "le mot de passe ne correspond pas" ;
       $check04=false;
@@ -96,18 +102,34 @@
     }
   }
 
-  if(isset($_POST['captcha']))
-  {
-    if($_POST['captcha']==$_SESSION['code'])
-    {
-      $check05=true;
-    } 
-    else 
-    {
-      $pasok["Errcap"] = "Code incorrect" ;
-      $check05=false;
+// Inclusion de l'API recaptcha
+require 'recaptchalib.php';
+ 
+// Définition des 2 clés
+$siteKey = "6LdxGbIZAAAAANx8Gm8hDdD111CFCW4RsocdI-A6";
+$secret   = "6LdxGbIZAAAAAJYjCphQrWZh2lrJwY-nUtjqJaNH";
+ 
+$lang = "fr";
 
-    }
+// la reponse de recaptcha
+$resp = null;
+// erreur si recaptcha null
+$error = null;
+
+
+
+$reCaptcha = new ReCaptcha($secret);
+
+// la reponse le retour de recaptcha
+if ($_POST["g-recaptcha-response"]) 
+{
+    $resp = $reCaptcha->verifyResponse($_SERVER["REMOTE_ADDR"], $_POST["g-recaptcha-response"]);
+    $check05=true;
+}
+else
+{
+    $pasok["Errcaptcha"] = "faux" ;
+    $check05=false;
 }
 
 
