@@ -33,8 +33,8 @@ if (isset($_POST["connexion"]))
         echo "login pas ok";
       } else {
         echo "login pas ok";
-      };
-    };
+      }
+    }
     // puis je verifie le mot de passe par rapport au RegEx
     if (isset($pass)) 
     {
@@ -46,13 +46,13 @@ if (isset($_POST["connexion"]))
         echo "password pas ok";
       } else {
         echo "password ok";
-      };
-    };
+      }
+    }
 
   {
   $connexion = true;
-  };
-};
+  }
+}
 
 
 // Je fais en sorte que chaque utilisateur est son propre role en verifiant dans ma base de donnée
@@ -78,16 +78,19 @@ if ($connexion == true)
     $respass = $reslog->password;
     $resrole = $reslog->role;
     //  J'attribut a une variable golable $_SESSION un role pour pouvoir gerer mes autres pages PHP
-    if ($resrole == "admin" && $respass == $pass) {
+    if ($resrole == "admin" && $respass == $pass) 
+    {
       $_SESSION["role"] = "admin";
       echo '<script>alert("Vous etes connecté!")</script>';
-    } else if ($resrole == "client" && $respass == $pass) {
+    } 
+    else if ($resrole == "client" && $respass == $pass) 
+    {
       $_SESSION["role"] = "user";
       echo '<script>alert("Vous etes connecté!")</script>';
-    };
+    }
     return $reslogi;
-  };
+  }
   connection();
   $connecter=true;
-};
-};
+}
+}

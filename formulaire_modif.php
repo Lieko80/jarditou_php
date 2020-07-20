@@ -1,19 +1,11 @@
 <!--appel raccourcie pour l'entete des pages-->
-<?php if(file_exists("public/php/entete.php")){
-    include("public/php/entete.php");} 
-else{
-     echo "voir chemin entete.php";
-    }?>
+<?php include("public/php/entete.php");?>
 <!--titre de la page-->        
     <title>Modification</title>
     <body>
     <div class="container">
 <!--appel raccourcie pour le head des pages-->
-<?php if(file_exists("public/php/header.php")){
-    include("public/php/header.php");} 
-else{
-     echo "voir chemin header.php";
-    }?>         
+<?php include("public/php/header.php");?>         
 
 <?php   
      $db = connexionBase(); // Appel de la fonction de connexion
@@ -78,8 +70,10 @@ else{
 <!--photo et bouton parcourir input type text-->
                 <div class="form-group mx-2">
                 <label for="id"> Photo: </label>
-                <a class="mx-2"><?php echo '<img src="public/img/',($_POST["id"]),".",($_POST["photo"]),'"alt="',($_POST["id"]),'" height="60" />'; ?></a>
-                <input type="file"  name="fichier" id="fichier">
+                <a class="mx-2"><?php echo '<img src="public/img/',($_POST["id"]),".",($_POST["photo"]),'"alt="',($_POST["id"]),'" width="120" />'; ?></a>->
+                <!-- bouton parcourir-->
+                <img src="" id='preview' alt="" width="120">
+                <input type="file"  name="fichier" id="fichier" onchange="previewImage(event);">
                 <small id="Errextension" class="text-danger"><?php if (isset($pasok['Errextension'])) echo $pasok['Errextension']; ?></small>
 
                 </div>
@@ -109,17 +103,10 @@ else{
 </form>
 
 <!--appel raccourcie pour le footer des pages-->
-<?php if(file_exists("public/php/footer.php")){
-    include("public/php/footer.php");} 
-else{
-     echo "voir chemin footer.php";
-    }?>
+<?php include("public/php/footer.php");?>
 
 </div>
+<script src="public/js/apimg.js"></script>
 <script src="public/js/modif.js"></script>
 <!--appel raccourcie pour le pieds de page des pages-->
-<?php if(file_exists("public/php/piedsdepage.php")){
-    include("public/php/piedsdepage.php");} 
-else{
-     echo "voir chemin piedsdepage.php";
-    }?>
+<?php include("public/php/piedsdepage.php");?>

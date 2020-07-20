@@ -1,19 +1,11 @@
 <!--appel raccourcie pour l'entete des pages-->
-<?php if(file_exists("public/php/entete.php")){
-    include("public/php/entete.php");} 
-else{
-     echo "voir chemin entete.php";
-    }?>
+<?php include("public/php/entete.php");?>
 <!--titre de la page-->        
     <title>Ajout</title>
     <body>
     <div class="container">
 <!--appel raccourcie pour le head des pages-->
-<?php if(file_exists("public/php/header.php")){
-    include("public/php/header.php");} 
-else{
-     echo "voir chemin header.php";
-    }?>   
+<?php include("public/php/header.php");?>   
 
 <?php   
     require "script_ajout.php";
@@ -91,7 +83,9 @@ else{
 <!--extension photo-->
                 <div class="form-group mx-2">
                     <input type="text" id="extension" name="extension" class="form-control"value="" hidden>
-                    <input type="file"  name="fichier" id="fichier">
+                    <!-- bouton d'import photo -->
+                    <img src="" id='preview' alt="" width="120">
+                    <input type="file"  name="fichier" id="fichier" onchange="previewImage(event);">
                     <small id="Errextension" class="text-danger"><?php if (isset($pasok['Errextension'])) echo $pasok['Errextension']; ?></small>
                     <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
                 </div>
@@ -118,17 +112,11 @@ else{
 
 
 <!--appel raccourcie pour le footer des pages-->
-<?php if(file_exists("public/php/footer.php")){
-    include("public/php/footer.php");} 
-else{
-     echo "voir chemin footer.php";
-    }?>
+<?php include("public/php/footer.php");?>
 
 </div>
 <script src="public/js/ajout.js"></script>
+<script src="public/js/apimg.js"></script>
+
 <!--appel raccourcie pour le pieds de page des pages-->
-<?php if(file_exists("public/php/piedsdepage.php")){
-    include("public/php/piedsdepage.php");} 
-else{
-     echo "voir chemin piedsdepage.php";
-    }?>
+<?php include("public/php/piedsdepage.php");?>

@@ -1,19 +1,11 @@
 <!--appel raccourcie pour l'entete des pages-->
-<?php if(file_exists("public/php/entete.php")){
-    include("public/php/entete.php");} 
-else{
-     echo "voir chemin entete.php";
-    }?>
+<?php include("public/php/entete.php");?>
 <!--titre de la page-->        
     <title>Liste</title>
     <body>
     <div class="container">
 <!--appel raccourcie pour le head des pages-->
-<?php if(file_exists("public/php/header.php")){
-    include("public/php/header.php");} 
-else{
-     echo "voir chemin header.php";
-    }?>  
+<?php include("public/php/header.php");?>  
 
     
      <?php   
@@ -80,16 +72,8 @@ else{
 
 
 <!--appel raccourcie pour le footer des pages-->
-<?php if(file_exists("public/php/footer.php")){
-    include("public/php/footer.php");} 
-else{
-     echo "voir chemin footer.php";
-    }?>
+<?php include("public/php/footer.php");?>
 
 </div>
 <!--appel raccourcie pour le pieds de page des pages-->
-<?php if(file_exists("public/php/piedsdepage.php")){
-    include("public/php/piedsdepage.php");} 
-else{
-     echo "voir chemin piedsdepage.php";
-    }?>
+<?php include("public/php/piedsdepage.php");?>
