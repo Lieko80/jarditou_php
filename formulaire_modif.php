@@ -25,7 +25,8 @@
                 <div class="form-group mx-2">
                     <label for="id"> Référence: </label>
                     <input type="text" id="reference" name="reference" class="form-control"value="<?php echo $_POST["ref"]; ?>" >
-                    <p id="Errreference" class="text-danger"></p>
+                    <small id="Errreference" class="text-danger"></small>
+                    <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
                 </div>
 <!--Categorie-->
                 <div class="form-group mx-2">
@@ -41,31 +42,36 @@
                 <div class="form-group mx-2">
                     <label for="id"> Libellé: </label>
                     <input type="text" id="libelle" name="libelle" class="form-control"value="<?php echo $_POST["Lib"]; ?>" >
-                    <p id="Errlibelle" class="text-danger"></p>
+                    <small id="Errlibelle" class="text-danger"></small>
+                    <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
                 </div>
 <!--Description-->
                 <div class="form-group mx-2">
                     <label for="id"> Description: </label>
                     <textarea name="description" class="form-control" id="description" ><?php echo $_POST["description"]; ?></textarea>
-                    <p id="Errdescription" class="text-danger"></p>
-                </div>
+                    <small id="Errdescription" class="text-danger"></small>
+                    <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
+                    </div>
 <!--Prix-->
                 <div class="form-group mx-2">
                     <label for="id"> Prix: </label>
                     <input type="text" id="prix" name="prix" class="form-control"value="<?php echo $_POST["Prix"]; ?>" >
-                    <p id="Errprix" class="text-danger"></p>
-                </div>
+                    <small id="Errprix" class="text-danger"></small>
+                    <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
+                    </div>
 <!--Stock-->
                 <div class="form-group mx-2">
                     <label for="id"> Stock: </label>
                     <input type="text" id="stock" name="stock" class="form-control"value="<?php echo $_POST["Stock"]; ?>" >
-                    <p id="Errstock" class="text-danger"></p>
-                </div>
+                    <small id="Errstock" class="text-danger"></small>
+                    <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
+                    </div>
 <!--Couleur -->
                 <div class="form-group mx-2">
                     <label for="id"> Couleur: </label>
                     <input type="text" id="couleur" name="couleur" class="form-control"value="<?php echo $_POST["Coul"]; ?>" >
-                    <p id="Errcouleur" class="text-danger"></p>
+                    <small id="Errcouleur" class="text-danger"></small> 
+                    <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
                 </div>
 <!--photo et bouton parcourir input type text-->
                 <div class="form-group mx-2">
@@ -74,8 +80,9 @@
                 <!-- bouton parcourir-->
                 <img src="" id='preview' alt="" width="120">
                 <input type="file"  name="fichier" id="fichier" onchange="previewImage(event);">
+                
                 <small id="Errextension" class="text-danger"><?php if (isset($pasok['Errextension'])) echo $pasok['Errextension']; ?></small>
-
+                <!--renvoie les erreur du fichier js et du fichier php correspondant aux verification-->
                 </div>
 
 
